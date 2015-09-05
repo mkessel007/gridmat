@@ -1,0 +1,902 @@
+/*!
+Theme Name: gridmat
+Theme URI: http://underscores.me/
+Author: Jon Rivers
+Author URI: http://rivers.click
+Description: A simple material theme for Wordpress
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gridmat
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+gridmat is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*comment out
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+/* line 1, sass/typography/_typography.scss */
+
+body,
+button,
+input,
+select,
+textarea
+{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    color: #404040;
+}
+
+/* line 1, sass/typography/_headings.scss */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    clear: both;
+}
+
+/* line 1, sass/typography/_copy.scss */
+
+p
+{
+    margin-bottom: 1.5em;
+}
+
+/* line 5, sass/typography/_copy.scss */
+
+dfn,
+cite,
+em,
+i
+{
+    font-style: italic;
+}
+
+/* line 9, sass/typography/_copy.scss */
+
+blockquote
+{
+    margin: 0 1.5em;
+}
+
+/* line 13, sass/typography/_copy.scss */
+
+address
+{
+    margin: 0 0 1.5em;
+}
+
+/* line 17, sass/typography/_copy.scss */
+
+pre
+{
+    font-family: 'Courier 10 Pitch', Courier, monospace;
+    font-size: 15px;
+    font-size: .9375rem;
+    line-height: 1.6;
+
+    overflow: auto;
+
+    max-width: 100%;
+    margin-bottom: 1.6em;
+    padding: 1.6em;
+
+    background: #eee;
+}
+
+/* line 28, sass/typography/_copy.scss */
+
+code,
+kbd,
+tt,
+var
+{
+    font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+    font-size: 15px;
+    font-size: .9375rem;
+}
+
+/* line 33, sass/typography/_copy.scss */
+
+abbr,
+acronym
+{
+    cursor: help;
+
+    border-bottom: 1px dotted #666;
+}
+
+/* line 38, sass/typography/_copy.scss */
+
+mark,
+ins
+{
+    text-decoration: none;
+
+    background: #fff9c0;
+}
+
+/* line 43, sass/typography/_copy.scss */
+
+big
+{
+    font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+/* line 1, sass/elements/_elements.scss */
+
+html
+{
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+/* line 5, sass/elements/_elements.scss */
+
+*,
+*:before,
+*:after
+{
+    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    -moz-box-sizing: inherit;
+         box-sizing: inherit;
+}
+
+/* line 11, sass/elements/_elements.scss */
+
+body
+{
+    background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+/* line 15, sass/elements/_elements.scss */
+
+blockquote,
+q
+{
+    quotes: '' '';
+}
+
+/* line 18, sass/elements/_elements.scss */
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+{
+    content: '';
+}
+
+/* line 24, sass/elements/_elements.scss */
+
+hr
+{
+    height: 1px;
+    margin-bottom: 1.5em;
+
+    border: 0;
+    background-color: #ccc;
+}
+
+/* line 1, sass/elements/_lists.scss */
+
+ul,
+ol
+{
+    margin: 0 0 1.5em 3em;
+}
+
+/* line 5, sass/elements/_lists.scss */
+
+ul
+{
+    list-style: disc;
+}
+
+/* line 9, sass/elements/_lists.scss */
+
+ol
+{
+    list-style: decimal;
+}
+
+/* line 13, sass/elements/_lists.scss */
+
+li > ul,
+li > ol
+{
+    margin-bottom: 0;
+    margin-left: 1.5em;
+}
+
+/* line 19, sass/elements/_lists.scss */
+
+dt
+{
+    font-weight: bold;
+}
+
+/* line 23, sass/elements/_lists.scss */
+
+dd
+{
+    margin: 0 1.5em 1.5em;
+}
+
+/* line 33, sass/elements/_elements.scss */
+
+img
+{
+    max-width: 100%; /* Adhere to container width. */
+    height: auto; /* Make sure images are scaled correctly. */
+}
+
+/* line 1, sass/elements/_tables.scss */
+
+table
+{
+    width: 100%;
+    margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*comment out
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+/* line 1, sass/navigation/_links.scss */
+
+a
+{
+    color: royalblue;
+}
+
+/* line 4, sass/navigation/_links.scss */
+
+a:visited
+{
+    color: purple;
+}
+
+/* line 7, sass/navigation/_links.scss */
+
+a:hover,
+a:focus,
+a:active
+{
+    color: midnightblue;
+}
+
+/* line 12, sass/navigation/_links.scss */
+
+a:focus
+{
+    outline: thin dotted;
+}
+
+/* line 15, sass/navigation/_links.scss */
+
+a:hover,
+a:active
+{
+    outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+/* line 1, sass/navigation/_menus.scss */
+
+.main-navigation
+{
+    display: block;
+    float: left;
+    clear: both;
+
+    width: 100%;
+}
+
+/* line 7, sass/navigation/_menus.scss */
+
+.main-navigation ul
+{
+    display: none;
+
+    margin: 0;
+    padding-left: 0;
+
+    list-style: none;
+}
+
+/* line 13, sass/navigation/_menus.scss */
+
+.main-navigation ul ul
+{
+    position: absolute;
+    z-index: 99999;
+    top: 1.5em;
+    left: -999em;
+
+    float: left;
+
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+}
+
+/* line 21, sass/navigation/_menus.scss */
+
+.main-navigation ul ul ul
+{
+    top: 0;
+    left: -999em;
+}
+
+/* line 27, sass/navigation/_menus.scss */
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul
+{
+    left: 100%;
+}
+
+/* line 33, sass/navigation/_menus.scss */
+
+.main-navigation ul ul a
+{
+    width: 200px;
+}
+
+/* line 46, sass/navigation/_menus.scss */
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul
+{
+    left: auto;
+}
+
+/* line 51, sass/navigation/_menus.scss */
+
+.main-navigation li
+{
+    position: relative;
+
+    float: left;
+}
+
+/* line 59, sass/navigation/_menus.scss */
+
+.main-navigation a
+{
+    display: block;
+
+    text-decoration: none;
+}
+
+/* Small menu. */
+
+/* line 71, sass/navigation/_menus.scss */
+
+.menu-toggle,
+.main-navigation.toggled ul
+{
+    display: block;
+}
+
+/* line 89, sass/navigation/_menus.scss */
+
+.site-main .comment-navigation,
+.site-main
+.posts-navigation,
+.site-main
+.post-navigation
+{
+    overflow: hidden;
+
+    margin: 0 0 1.5em;
+}
+
+/* line 94, sass/navigation/_menus.scss */
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous
+{
+    float: left;
+
+    width: 50%;
+}
+
+/* line 99, sass/navigation/_menus.scss */
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next
+{
+    float: right;
+
+    width: 50%;
+
+    text-align: right;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+
+/* line 2, sass/modules/_accessibility.scss */
+
+.screen-reader-text
+{
+    position: absolute !important;
+
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px;
+    height: 1px;
+}
+
+/* line 9, sass/modules/_accessibility.scss */
+
+.screen-reader-text:focus
+{
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: bold;
+    line-height: normal;
+
+    z-index: 100000; /* Above WP toolbar. */
+    top: 5px;
+    left: 5px;
+
+    display: block;
+    clip: auto !important;
+
+    width: auto;
+    height: auto;
+    padding: 15px 23px 14px;
+
+    text-decoration: none;
+
+    color: #21759b;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+/* line 1, sass/modules/_alignments.scss */
+
+.alignleft
+{
+    display: inline;
+    float: left;
+
+    margin-right: 1.5em;
+}
+
+/* line 7, sass/modules/_alignments.scss */
+
+.alignright
+{
+    display: inline;
+    float: right;
+
+    margin-left: 1.5em;
+}
+
+/* line 13, sass/modules/_alignments.scss */
+
+.aligncenter
+{
+    display: block;
+    clear: both;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+
+/* line 1, sass/modules/_clearings.scss */
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after
+{
+    display: table;
+
+    content: '';
+}
+
+/* line 16, sass/modules/_clearings.scss */
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after
+{
+    clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+/* line 1, sass/site/secondary/_widgets.scss */
+
+.widget
+{
+    margin: 0 0 1.5em; /* Make sure select elements fit in widgets. */
+}
+
+/* line 5, sass/site/secondary/_widgets.scss */
+
+.widget select
+{
+    max-width: 100%;
+}
+
+/* Search widget. */
+
+/* line 11, sass/site/secondary/_widgets.scss */
+
+.widget_search .search-submit
+{
+    display: none;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+/* line 1, sass/site/primary/_posts-and-pages.scss */
+
+.sticky
+{
+    display: block;
+}
+
+/* line 5, sass/site/primary/_posts-and-pages.scss */
+
+.hentry
+{
+    margin: 0 0 1.5em;
+}
+
+/* line 9, sass/site/primary/_posts-and-pages.scss */
+
+.byline,
+.updated:not(.published)
+{
+    display: none;
+}
+
+/* line 14, sass/site/primary/_posts-and-pages.scss */
+
+.single .byline,
+.group-blog .byline
+{
+    display: inline;
+}
+
+/* line 19, sass/site/primary/_posts-and-pages.scss */
+
+.page-content,
+.entry-content,
+.entry-summary
+{
+    margin: 1.5em 0 0;
+}
+
+/* line 25, sass/site/primary/_posts-and-pages.scss */
+
+.page-links
+{
+    clear: both;
+
+    margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+
+/* line 1, sass/site/primary/_asides.scss */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title
+{
+    display: none;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+/* line 1, sass/site/primary/_comments.scss */
+
+.comment-content a
+{
+    word-wrap: break-word;
+}
+
+/* line 4, sass/site/primary/_comments.scss */
+
+.bypostauthor
+{
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+
+/* line 2, sass/modules/_infinite-scroll.scss */
+
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer
+{
+    /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+
+/* line 8, sass/modules/_infinite-scroll.scss */
+
+.infinity-end.neverending .site-footer
+{
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+/* line 1, sass/media/_media.scss */
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+
+    border: none;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+
+/* line 11, sass/media/_media.scss */
+
+embed,
+iframe,
+object
+{
+    max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+
+/* line 1, sass/media/_captions.scss */
+
+.wp-caption
+{
+    max-width: 100%;
+    margin-bottom: 1.5em;
+}
+
+/* line 5, sass/media/_captions.scss */
+
+.wp-caption img[class*='wp-image-']
+{
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* line 9, sass/media/_captions.scss */
+
+.wp-caption .wp-caption-text
+{
+    margin: .8075em 0;
+}
+
+/* line 14, sass/media/_captions.scss */
+
+.wp-caption-text
+{
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+
+/* line 1, sass/media/_galleries.scss */
+
+.gallery
+{
+    margin-bottom: 1.5em;
+}
+
+/* line 5, sass/media/_galleries.scss */
+
+.gallery-item
+{
+    display: inline-block;
+
+    width: 100%;
+
+    text-align: center;
+    vertical-align: top;
+}
+
+/* line 11, sass/media/_galleries.scss */
+
+.gallery-columns-2 .gallery-item
+{
+    max-width: 50%;
+}
+
+/* line 15, sass/media/_galleries.scss */
+
+.gallery-columns-3 .gallery-item
+{
+    max-width: 33.33%;
+}
+
+/* line 19, sass/media/_galleries.scss */
+
+.gallery-columns-4 .gallery-item
+{
+    max-width: 25%;
+}
+
+/* line 23, sass/media/_galleries.scss */
+
+.gallery-columns-5 .gallery-item
+{
+    max-width: 20%;
+}
+
+/* line 27, sass/media/_galleries.scss */
+
+.gallery-columns-6 .gallery-item
+{
+    max-width: 16.66%;
+}
+
+/* line 31, sass/media/_galleries.scss */
+
+.gallery-columns-7 .gallery-item
+{
+    max-width: 14.28%;
+}
+
+/* line 35, sass/media/_galleries.scss */
+
+.gallery-columns-8 .gallery-item
+{
+    max-width: 12.5%;
+}
+
+/* line 39, sass/media/_galleries.scss */
+
+.gallery-columns-9 .gallery-item
+{
+    max-width: 11.11%;
+}
+
+/* line 44, sass/media/_galleries.scss */
+
+.gallery-caption
+{
+    display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+@media screen and (min-width: 37.5em)
+{
+    /* line 77, sass/navigation/_menus.scss */
+
+    .menu-toggle
+    {
+        display: none;
+    }
+
+    /* line 80, sass/navigation/_menus.scss */
+
+    .main-navigation ul
+    {
+        display: block;
+    }
+}
