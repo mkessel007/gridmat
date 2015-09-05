@@ -1,0 +1,28 @@
+{
+  "name": "gridmat",
+  "version": "1.0.0",
+  "authors": [
+    "Jon Rivers <jerivers3@gmail.com>"
+  ],
+  "description": "A simple material theme for Wordpress",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "material",
+    "wordpress",
+    "theme"
+  ],
+  "license": "MIT",
+  "homepage": "http://rivers.click",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "~0.97.0"
+  }
+}
