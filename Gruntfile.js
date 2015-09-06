@@ -34,7 +34,8 @@ module.exports = function(grunt) {
                     lineNumbers: true,
                 },
                 files: {
-                    'style.css': 'sass/style.scss'
+                    'style.css': 'sass/style.scss',
+                    'materialize.css': 'sass/materialize.scss'
                 }
             }
         },
@@ -44,7 +45,7 @@ module.exports = function(grunt) {
                 browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
             },
             dist: {
-                src:  'style.css'
+                src:  '*.css'
             }
         },
 
@@ -54,7 +55,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'style.css': 'style.css'
+                    'style.css': 'style.css',
+                    'materialize.css': 'materialize.css'
                 }
             }
         },
@@ -133,7 +135,7 @@ module.exports = function(grunt) {
 
         clean: {
             js: ['js/project*', 'js/**/*.min.js'],
-            css: ['style.css', 'style.min.css']
+            css: ['style.css', 'style.min.css', 'materialize.css','materialize.min.css']
         },
 
         update_submodules: {
