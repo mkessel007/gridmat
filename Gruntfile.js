@@ -76,7 +76,7 @@ module.exports = function(grunt) {
                 src: [
                     'js/partials/*.js'
                 ],
-                dest: 'js/project.js',
+                dest: 'js/gridmat.js',
             }
         },
 
@@ -134,7 +134,7 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            js: ['js/project*', 'js/**/*.min.js'],
+            js: ['js/gridmat*', 'js/**/*.min.js'],
             css: ['style.css', 'style.min.css', 'materialize.css','materialize.min.css']
         },
 
